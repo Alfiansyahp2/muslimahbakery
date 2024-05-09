@@ -17,8 +17,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
         useMaterial3: true,
       ),
-      home: const LoginPage(), // Changed MyHomePage to HomePage
-       //home: HomePage(),
+      //home: const LoginPage(), // Changed MyHomePage to HomePage
+       home: MenuPage(),
     );
   }
 }

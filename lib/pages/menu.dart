@@ -157,42 +157,63 @@ class HomePage extends StatelessWidget {
               Stack(
                 children: [
                   Container(
-                    height: 150, width: double.infinity, color: Colors.amber
+                    height: 100,
+                    width: double.infinity,
+                    color: Colors.amber,
                   ),
                   Padding(
-                     padding: EdgeInsets.fromLTRB(20.0, 60.0, 60.0, 60.0), // Tambahkan EdgeInsets
-                    child: Container(
-                      height: 40,
-                      width: 300,
-                      decoration: BoxDecoration(
-                        color: Color(0xFFF5F5F7),
-                        borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: TextField(
-                          cursorHeight: 30,
-                          autofocus: false,
-                          decoration: InputDecoration(
-                            hintText: "Search...",
-                            prefixIcon: Icon(Icons.search),
-                            border: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.grey, width: 2),
+                    padding: EdgeInsets.fromLTRB(20.0, 20.0, 60.0, 60.0),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: Container(
+                            height: 40,
+                            decoration: BoxDecoration(
+                              color: Color(0xFFF5F5F7),
                               borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: TextField(
+                              cursorHeight: 30,
+                              autofocus: false,
+                              decoration: InputDecoration(
+                                hintText: "Search...",
+                                prefixIcon: Icon(Icons.search),
+                                border: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.grey, width: 2),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                      
+                        SizedBox(width: 30), // Spacer between search bar and icons
+                        IconButton(
+                          icon: Icon(Icons.shopping_cart, size: 30),
+                          onPressed: () {
+                            // Action when cart icon is pressed
+                          },
+                        ),
+                        IconButton(
+                          icon: Icon(Icons.list, size: 30,),
+                          onPressed: () {
+                            // Action when list icon is pressed
+                           //Navigator.push(context, MaterialPageRoute(builder: (context) => ShoppingCartPage()));
+                          },
+                        ),
+                      ],
                     ),
+                  ),
                 ],
               ),
-              
             ],
           ),
         ),
       ),
     );
   }
-} 
+}
+
+
 
 
 class ProfilePage extends StatelessWidget {
