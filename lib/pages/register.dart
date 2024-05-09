@@ -119,7 +119,7 @@ class _RegisterFormState extends State<RegisterForm> {
               },
               child: Text("SAVE"),
               style: ElevatedButton.styleFrom(
-                primary: Colors.amber,
+                backgroundColor: Colors.amber,
                 padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50),

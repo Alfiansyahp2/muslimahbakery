@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:browject/pages/editprofil.dart'; // Import halaman edit profil
 import 'package:browject/pages/login.dart'; // Import halaman login
 
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -27,13 +28,13 @@ class _MenuPageState extends State<MenuPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("HOME"),
+        title: Text("Muslimah Bakery"),
         backgroundColor: Colors.amber,
       ),
       body: IndexedStack( // Menggunakan IndexedStack untuk menampilkan widget berdasarkan index
         index: index,
         children: [
-          Center(child: Text("HOME")),
+          HomePage(),
           Center(child: Text("CART")),
           ProfilePage(), // Menampilkan halaman profil
         ],
@@ -143,6 +144,57 @@ class _MenuPageState extends State<MenuPage> {
   }
 }
 
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Stack(
+                children: [
+                  Container(
+                    height: 150, width: double.infinity, color: Colors.amber
+                  ),
+                  Padding(
+                     padding: EdgeInsets.fromLTRB(20.0, 60.0, 60.0, 60.0), // Tambahkan EdgeInsets
+                    child: Container(
+                      height: 40,
+                      width: 300,
+                      decoration: BoxDecoration(
+                        color: Color(0xFFF5F5F7),
+                        borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: TextField(
+                          cursorHeight: 30,
+                          autofocus: false,
+                          decoration: InputDecoration(
+                            hintText: "Search...",
+                            prefixIcon: Icon(Icons.search),
+                            border: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.grey, width: 2),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                          ),
+                        ),
+                      ),
+                      
+                    ),
+                ],
+              ),
+              
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+} 
+
+
 class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -169,3 +221,5 @@ class ProfilePage extends StatelessWidget {
     );
   }
 }
+
+

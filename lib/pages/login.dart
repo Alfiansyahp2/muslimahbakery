@@ -24,8 +24,8 @@ class _LoginPageState extends State<LoginPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              'pict/gambar1.jpg',
-              width: 100,
+              'pict/logo1.png',
+              width: 200,
             ),
           ],
         ),
@@ -116,7 +116,7 @@ class _LoginPageState extends State<LoginPage> {
                 },
                 child: Text("LOGIN"),
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.amber,
+                  backgroundColor: Colors.amber,
                   padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50),

@@ -1,3 +1,4 @@
+import 'package:browject/pages/menu.dart';
 import 'package:flutter/material.dart'; 
 import 'package:browject/pages/login.dart';
 
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const LoginPage(), // Changed MyHomePage to HomePage
+       //home: HomePage(),
     );
   }
 }
