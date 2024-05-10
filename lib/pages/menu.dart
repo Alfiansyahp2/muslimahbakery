@@ -1,6 +1,8 @@
+import 'package:browject/widget/category.dart';
 import 'package:flutter/material.dart';
 import 'package:browject/pages/editprofil.dart'; // Import halaman edit profil
-import 'package:browject/pages/login.dart'; // Import halaman login
+import 'package:browject/pages/login.dart';
+import 'package:flutter/widgets.dart'; // Import halaman login
 
 
 class MyApp extends StatelessWidget {
@@ -162,7 +164,7 @@ class HomePage extends StatelessWidget {
                     color: Colors.amber,
                   ),
                   Padding(
-                    padding: EdgeInsets.fromLTRB(20.0, 20.0, 60.0, 60.0),
+                    padding: EdgeInsets.fromLTRB(40.0, 20.0, 60.0, 60.0),
                     child: Row(
                       children: [
                         Expanded(
@@ -186,7 +188,7 @@ class HomePage extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(width: 30), // Spacer between search bar and icons
+                        SizedBox(width: 50), // Spacer between search bar and icons
                         IconButton(
                           icon: Icon(Icons.shopping_cart, size: 30),
                           onPressed: () {
@@ -194,7 +196,7 @@ class HomePage extends StatelessWidget {
                           },
                         ),
                         IconButton(
-                          icon: Icon(Icons.list, size: 30,),
+                          icon: Icon(Icons.cake_sharp, size: 30,),
                           onPressed: () {
                             // Action when list icon is pressed
                            //Navigator.push(context, MaterialPageRoute(builder: (context) => ShoppingCartPage()));
@@ -205,14 +207,82 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
+              SizedBox( height: 10),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 70),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(                   
+                      child: Column (
+                        children: [
+                          IconButton(
+                            icon: Image.asset("pict/logodonat.png", width: 40,),
+                            onPressed: () {
+                              //tindakan ketika icon di klik
+                            },
+                          ),
+                          Text("Donat"),
+                        ],
+                      ),                  
+                    ),
+                    Container(
+                      child: Column(
+                        children: [
+                          IconButton(
+                             icon: Image.asset("pict/logokue.png", width: 40,),
+                             onPressed: () {
+                              // Tindakan ketika ikon donat diklik
+                             },
+                          ),
+                          Text("Kue"),
+                        ],
+                      ),
+                    ),
+                    Container(
+                       child: Column(
+                        children: [
+                          IconButton(
+                            icon: Image.asset("pict/logoroti.png", width: 40,),
+                            onPressed: () {
+                              // Tindakan ketika ikon roti diklik
+                            },
+                          ),
+                          Text("Roti"),
+                        ],
+                       ),
+                    ),
+                 //mulai
+                  ],
+                ),
+              ),
+
+              SizedBox(height: 50),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Center(
+                      child: Text(
+                      "Produk Terlaris",
+                       style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold,),
+                     ),
+                    ),
+                     
+                  ]
+                )
+              )
             ],
           ),
         ),
+        
       ),
     );
   }
 }
 
+     
 
 
 
